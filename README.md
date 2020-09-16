@@ -14,7 +14,7 @@ A webapp was also made for this project and can be found here:
 
 [Tesla Elon Web APP](https://elon-tesla.herokuapp.com)
 
-**Goal of the model was to see if we can use BERT to improve multivariate time series predictions*
+**Goal of the model was to see if we can use BERT to improve multivariate time series predictions**
 
 ### Libraries 
 
@@ -84,7 +84,98 @@ Main steps of in data Augmentation:
 * [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
 
 
-## Feature Map Exploration
+
+
+## Image Data Cleaning and Augmentation
+
+Main steps of in data Augmentation:
+
+     Splitting the data in half
+     Combining single image data to split data
+     Mirroring the image data    
+     Adjusting the brightness of the image data     
+     Photoshop increase image resolution
+     Resize the image to 512 x 512 and 256 x 256
+     Run through fastai
+     Use dataset_tool.py from Nvidia to transform to tfrecords
+
+
+* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
+
+
+
+
+## Hypothesis 
+
+Main steps of in data Augmentation:
+
+     Splitting the data in half
+     Combining single image data to split data
+     Mirroring the image data    
+     Adjusting the brightness of the image data     
+     Photoshop increase image resolution
+     Resize the image to 512 x 512 and 256 x 256
+     Run through fastai
+     Use dataset_tool.py from Nvidia to transform to tfrecords
+
+
+* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
+
+
+
+## Data Wrangling
+
+Main steps of in data Augmentation:
+
+     Splitting the data in half
+     Combining single image data to split data
+     Mirroring the image data    
+     Adjusting the brightness of the image data     
+     Photoshop increase image resolution
+     Resize the image to 512 x 512 and 256 x 256
+     Run through fastai
+     Use dataset_tool.py from Nvidia to transform to tfrecords
+
+
+* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
+
+
+
+## Data Cleaning
+
+Main steps of in data Augmentation:
+
+     Splitting the data in half
+     Combining single image data to split data
+     Mirroring the image data    
+     Adjusting the brightness of the image data     
+     Photoshop increase image resolution
+     Resize the image to 512 x 512 and 256 x 256
+     Run through fastai
+     Use dataset_tool.py from Nvidia to transform to tfrecords
+
+
+* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
+
+
+## Data Visualization
+
+Main steps of in data Augmentation:
+
+     Splitting the data in half
+     Combining single image data to split data
+     Mirroring the image data    
+     Adjusting the brightness of the image data     
+     Photoshop increase image resolution
+     Resize the image to 512 x 512 and 256 x 256
+     Run through fastai
+     Use dataset_tool.py from Nvidia to transform to tfrecords
+
+
+* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
+
+
+## Classical Text Classification 
 
 Visualization of Feature Map/Activation Map of images using VGG16 convolutional neural network
 
@@ -92,7 +183,7 @@ Visualization of Feature Map/Activation Map of images using VGG16 convolutional 
 
 * [Feature Map](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/feature_map.ipynb)
 
-## Deep Convolutional Generative Adversarial Network
+## BERT and DistilBERT
 
 <img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/mhxx.gif" width="480"></img>
 
@@ -109,7 +200,7 @@ Quick Visualization of image data using a DCGAN requires minimal computing power
 
 * [Deep Convolutional GAN](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/dcgan_mhxx.ipynb)
 
-## Frechet Inception Distance
+## XgBoost and Random Forest Regression 
 
 Best way to measure a GAN still is to look at fake images generated however there are quantitative measures.  Such as Frechet Inception Distance, Inception Score and Perceptual Path Length.
 
@@ -118,7 +209,7 @@ Best way to measure a GAN still is to look at fake images generated however ther
 
 * [Frechet Inception Distance](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/frechet_inception_distance.ipynb)
 
-## StyleGAN
+## RNN, LSTM, GRU 
 
 You will need to download NVIDIA StyleGAN.  
 
@@ -135,18 +226,6 @@ All adjustments were made inside the training/training_loop.py file.  You need t
 <img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/armor_morph.gif" width="480"></img>
 
 * [MHXX- StyleGAN](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_stylegan.ipynb)
-
-## Image Generation and Movie Clip
-
-To generate images and put them into an mp4 file.  
-    
-    Generates 1000 random images from pickled file
-    Can stitch together images and put them into an mp4 to see. 
-
-* [Image Generation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/img_generate.ipynb)
-
-<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/vidstitch_image_071215_20200315.jpg" width="480"></img>
-
 
 ## Author
 
