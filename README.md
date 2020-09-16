@@ -22,7 +22,7 @@ A webapp was also made for this project and can be found here:
 
 <tr>
   <td>Hypothesis</td>
-  <td>Nvidia GPU 11 gb and above, tensorflow-gpu 1.1.5, cuda 10.0, cuDNN 7.5, tensorrt 5.6.5</td>
+  <td>scipy, statsmodel, plotly, numpy, pandas, matplotlib</td>
 </tr>
 
 <tr>
@@ -67,59 +67,16 @@ A webapp was also made for this project and can be found here:
 </table>
 
 
-## Image Data Cleaning and Augmentation
-
-Main steps of in data Augmentation:
-
-     Splitting the data in half
-     Combining single image data to split data
-     Mirroring the image data    
-     Adjusting the brightness of the image data     
-     Photoshop increase image resolution
-     Resize the image to 512 x 512 and 256 x 256
-     Run through fastai
-     Use dataset_tool.py from Nvidia to transform to tfrecords
-
-
-* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
-
-
-
-
-## Image Data Cleaning and Augmentation
-
-Main steps of in data Augmentation:
-
-     Splitting the data in half
-     Combining single image data to split data
-     Mirroring the image data    
-     Adjusting the brightness of the image data     
-     Photoshop increase image resolution
-     Resize the image to 512 x 512 and 256 x 256
-     Run through fastai
-     Use dataset_tool.py from Nvidia to transform to tfrecords
-
-
-* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
-
-
-
-
 ## Hypothesis 
 
-Main steps of in data Augmentation:
+Hypothesis using Kruskal- Wallis H-Test and Mann-Whitnney U Test:
 
-     Splitting the data in half
-     Combining single image data to split data
-     Mirroring the image data    
-     Adjusting the brightness of the image data     
-     Photoshop increase image resolution
-     Resize the image to 512 x 512 and 256 x 256
-     Run through fastai
-     Use dataset_tool.py from Nvidia to transform to tfrecords
+     $H_{0}$: the distributions of both samples are equal.
+
+     $H_{A}$: the distributions of both samples are not equal.
 
 
-* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
+* [Hypothesis Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/notebooks/elonHypothesis.ipynb)
 
 
 
