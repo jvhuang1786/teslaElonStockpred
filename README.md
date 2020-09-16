@@ -1,8 +1,6 @@
-<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/fakes007560.png"></img>
+<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/logo.png"></img>
 
-# Generative Adversarial Networks Character Concept Creation
-
-## Second Capstone Project For Springboard using neural networks to generate images
+# Using Elon's Tweets to Predict Tesla Stock Price 
 
 ## Introduction
 
