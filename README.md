@@ -4,56 +4,64 @@
 
 ## Introduction
 
-This project goes through 3 types of GAN. Vanilla GAN, Deep Convolutional GAN and Style GAN.
+This project looked to use Elon's tweets to better predict Tesla stock price using Time Series.  
 
-Anime face data was collected through Kaggle. It contained 85000 images
+Financial price data was collected using the Yahoo Finance API
 
-https://www.kaggle.com/splcher/animefacedataset
+Tweet data was collected using the GetOldTweets3 API 
 
-MHXX armor data was collected through a fans website.  It contained 1083 images. After Augmentation became 19437.
+A webapp was also made for this project and can be found here:
 
-http://mhxx-soubigazou.info
+[Tesla Elon Web APP](https://elon-tesla.herokuapp.com)
 
-**Goal is to create a model that can generate images based on old assets by the studio or company and thus create future assets faster and at a lower cost**
+**Goal of the model was to see if we can use BERT to improve multivariate time series predictions*
 
-### Computer Requirements/Libraries/Modules
-
-Need to install the following
+### Libraries 
 
 <table>
 
 <tr>
-  <td>Computer Requirements</td>
+  <td>Hypothesis</td>
   <td>Nvidia GPU 11 gb and above, tensorflow-gpu 1.1.5, cuda 10.0, cuDNN 7.5, tensorrt 5.6.5</td>
 </tr>
 
 <tr>
-  <td>Image Data Cleaning and Augmentation</td>
+  <td>Data Wrangling</td>
   <td>numpy, os, cv2, glob, pandas, PIL, scipy, imageio, keras, augmentor, fastai</td>
 </tr>
 
 <tr>
-  <td>Feature Map Exploration</td>
+  <td>Data Cleaning</td>
   <td>keras.applications.vgg16, keras.preprocessing.image, matplotlib, numpy</td>
 </tr>
 
 <tr>
-  <td>Deep Convolutional Generative Adversarial Networks</td>
+  <td>Data Visualization</td>
   <td>numpy, os, glob, imageio, time, PIL, keras, matplotlib</td>
 </tr>
 
 <tr>
-  <td>Frechet Inception Distance</td>
+  <td>Classicial Classification of Text</td>
   <td>numpy, scipy, keras, skimage.transform</td>
 </tr>
 
 <tr>
-  <td>Style GAN (You will have to go to NVIDIA to download Style GAN and place this file inside it)</td>
+  <td>BERT and DistilBert</td>
   <td>numpy, tensorflow, dnnlib, config, train, training, copy, metrics</td>
 </tr>
 
 <tr>
-  <td>Image generator and movie clip</td>
+  <td>Arima</td>
+  <td>numpy, tensorflow, dnnlib, config, train, training, copy, metrics</td>
+</tr>
+
+<tr>
+  <td>Xgboost and RandomForest regression</td>
+  <td>numpy, tensorflow, dnnlib, config, train, training, copy, metrics</td>
+</tr>
+
+<tr>
+  <td>RNN, LSTM and GRU Neural Networks</td>
   <td>glob, numpy, moviepy, os, PIL, dnnlib, pickle</td>
 
 </table>
@@ -146,12 +154,15 @@ To generate images and put them into an mp4 file.
 
 ## Resources
 
-* [Machine Learning Mastery](https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/)
+* [Machine Learning Mastery LSTM Neural Networks](https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/)
 
-* [Deep Learning Illustrated](https://github.com/the-deep-learners/deep-learning-illustrated)
+* [Time Series using Arima](https://github.com/the-deep-learners/deep-learning-illustrated)
 
-* [DCGAN](https://towardsdatascience.com/generate-anime-style-face-using-dcgan-and-explore-its-latent-feature-representation-ae0e905f3974)
+* [Using BERT in PyTorch](https://github.com/the-deep-learners/deep-learning-illustrated)
 
-* [Nvidia Style GAN](https://arxiv.org/abs/1812.04948)
+* [What are RNNs](https://github.com/the-deep-learners/deep-learning-illustrated)
 
-* [Anime Faces with Gwern](https://www.gwern.net/Faces)
+* [What is BERT](https://github.com/the-deep-learners/deep-learning-illustrated)
+
+
+
