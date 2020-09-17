@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This project looked to use Elon's tweets to better predict Tesla stock price using Time Series.  
+**This project looked to use Elon's tweets to better predict Tesla stock price using Time Series.**
 
 Financial price data was collected using the Yahoo Finance API
 
@@ -52,17 +52,17 @@ A webapp was also made for this project and can be found here:
 
 <tr>
   <td>Arima</td>
-  <td>numpy, tensorflow, dnnlib, config, train, training, copy, metrics</td>
+  <td>scipy, statsmodel, math</td>
 </tr>
 
 <tr>
   <td>Xgboost and RandomForest regression</td>
-  <td>numpy, tensorflow, dnnlib, config, train, training, copy, metrics</td>
+  <td>sklearn, plotly, xgboost</td>
 </tr>
 
 <tr>
   <td>RNN, LSTM and GRU Neural Networks</td>
-  <td>glob, numpy, moviepy, os, PIL, dnnlib, pickle</td>
+  <td>tensorflow, sklearn, statsmodel</td>
 
 </table>
 
@@ -71,9 +71,9 @@ A webapp was also made for this project and can be found here:
 
 Hypothesis using Kruskal- Wallis H-Test and Mann-Whitnney U Test:
 
-     $H_{0}$: the distributions of both samples are equal.
+     Null Hypothesis: the distributions of both samples are equal.
 
-     $H_{A}$: the distributions of both samples are not equal.
+     Alternative Hypothesis: the distributions of both samples are not equal.
 
 
 * [Hypothesis Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/notebooks/elonHypothesis.ipynb)
@@ -82,7 +82,7 @@ Hypothesis using Kruskal- Wallis H-Test and Mann-Whitnney U Test:
 
 ## Data Wrangling
 
-Main steps of in data Augmentation:
+Steps For DataWrangling:
 
      Splitting the data in half
      Combining single image data to split data
