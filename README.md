@@ -190,15 +190,15 @@ All adjustments were made inside the training/training_loop.py file.  You need t
 
 ## Resources
 
-* [Machine Learning Mastery LSTM Neural Networks](https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/)
+* [Machine Learning Mastery LSTM Neural Networks](https://machinelearningmastery.com/time-series-prediction-lstm-recurrent-neural-networks-python-keras/)
 
-* [Time Series using Arima](https://github.com/the-deep-learners/deep-learning-illustrated)
+* [Time Series using Arima](https://www.machinelearningplus.com/time-series/vector-autoregression-examples-python/)
 
-* [Using BERT in PyTorch](https://github.com/the-deep-learners/deep-learning-illustrated)
+* [Using BERT in PyTorch](https://www.curiousily.com/posts/sentiment-analysis-with-bert-and-hugging-face-using-pytorch-and-python/)
 
-* [What are RNNs](https://github.com/the-deep-learners/deep-learning-illustrated)
+* [What are RNNs](https://www.youtube.com/watch?v=LHXXI4-IEns)
 
-* [What is BERT](https://github.com/the-deep-learners/deep-learning-illustrated)
+* [What is BERT](http://jalammar.github.io/illustrated-bert/)
 
 
 
