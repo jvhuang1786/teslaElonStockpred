@@ -6,9 +6,11 @@
 
 **This project looked to use Elon's tweets to better predict Tesla stock price using Time Series.**
 
-Financial price data was collected using the Yahoo Finance API
+* Financial price data was collected using the Yahoo Finance API
 
-Tweet data was collected using the GetOldTweets3 API 
+* Tweet data was collected using the GetOldTweets3 API 
+
+* Data was collected from the period of Dec 1, 2011 to July 31, 2020
 
 #### A webapp was also made for this project and can be found here:
 
@@ -252,15 +254,55 @@ Volume 0.0011621305
 
 ## RNN, LSTM, GRU 
 
-
-
-Anime-face dataset was trained for 7 days using the default learning rate and mini batch repeat.  
-Need to set the data path for the tfrecords to the location of your tfrecords.  
+I tried 3 neural networks.  GRU produced overall the best results. 
 
 <img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/face_morph.gif" width="480"></img>
 
-For MHXX dataset transfer learning was used and learning rate was adjusted to 0.001 and mini batch repeat to 1.
-All adjustments were made inside the training/training_loop.py file.  You need to reference in the pickled model as well in resume_run_id and resume_kimg.    
+Final GRU architecture is below: 
+
+```python
+#Learning Rate
+lr = 0.0001
+#Set RandomSeed
+tf.random.set_seed(777)
+
+#Reshape Structure (number of observations, time steps, number of features)
+
+# fit an GRU network to training data
+def fit_gru(train, test, batch_size, nb_epoch, neurons):
+    X, y = train[:, 0:-1], train[:, -1]
+    X = X.reshape(X.shape[0], 1, X.shape[1])
+    X_t, y_t = test[:, 0:-1], test[:, -1]
+    X_t = X_t.reshape(X_t.shape[0], 1, X_t.shape[1])
+    model = Sequential()
+    model.add(GRU(neurons, return_sequences = True, recurrent_activation="relu", activation = 'elu',
+              input_shape = (X.shape[1], X.shape[2]),dropout = 0.3))
+    model.add(Dense(1))
+    adam = optimizers.Adam(lr= lr, amsgrad=True)
+    model.compile(loss='mean_squared_error', optimizer=adam)
+    # Setting up an early stop
+    earlystop = EarlyStopping(monitor='val_loss', min_delta=0.0001, patience=50,  verbose=2, mode='min')
+    callbacks_list = [earlystop]
+    model.fit(X,y, epochs = nb_epoch, batch_size = batch_size, verbose = 2, shuffle = False, validation_data = (X_t, y_t),
+             callbacks=callbacks_list)
+    return model
+
+#Batch Size: 8
+#Epochs: 1000
+#Neurons: 500
+
+gru_model = fit_gru(train_scaled, test_scaled, 8, 1000, 500)
+# forecast the entire training dataset to build up state for forecasting
+train_reshaped = train_scaled[:, :-1].reshape(len(train_scaled), 1, 11)
+history = gru_model.predict(train_reshaped)
+
+```
+
+Predictions using DistilBERT to classify first and then add it in the dataframe for the GRU timeseries prediction.
+
+Before PyBay2020 predictions were made from August 1st, 2020 to August 13th, 2020.  Using the saved scaler on the training data as well as the saved GRU model.
+
+<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/armor_morph.gif" width="480"></img>
 
 <img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/armor_morph.gif" width="480"></img>
 
