@@ -71,9 +71,24 @@ Tweet data was collected using the GetOldTweets3 API
 
 Hypothesis using Kruskal- Wallis H-Test and Mann-Whitnney U Test:
 
+To test if the distributions are different, I chose to do two tests. A Mann-Whitney U and a Kruskal-Wallis H test.
+
+Observations were then split between three categories.
+
+Business Tweets - 1352 tweet observations
+Personal Tweets - 400 tweet observations
+No Tweets - 928 tweet observations
+
      Null Hypothesis: the distributions of both samples are equal.
 
      Alternative Hypothesis: the distributions of both samples are not equal.
+     
+`Comparison` | `Mann-Whitney U Test Stat` | `p-value`
+            --- | --- | ---
+            Biz Tweet and No Tweet| 390147.500 | 0.000
+            Biz Tweet and Personal Tweet| 130155.500 | 0.000
+            Personal Tweet and No Tweet| 250090.500 | 0.011
+            <br />
 
 
 * [Hypothesis Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/notebooks/elonHypothesis.ipynb)
@@ -100,16 +115,31 @@ Steps For DataWrangling:
 
 ## Data Cleaning
 
-Main steps of in data Augmentation:
+Data Cleaning Code:
 
-     Splitting the data in half
-     Combining single image data to split data
-     Mirroring the image data    
-     Adjusting the brightness of the image data     
-     Photoshop increase image resolution
-     Resize the image to 512 x 512 and 256 x 256
-     Run through fastai
-     Use dataset_tool.py from Nvidia to transform to tfrecords
+```python
+
+def clean_tweet(tweet):
+    #remove stopwords
+    #use beautiful soup to remove the &/amps etc in tweets as well as website links
+    soup_ = BeautifulSoup(tweet, 'lxml')
+    soup_ = soup_.get_text()
+    soup_ = re.sub(r'https?://[A-Za-z0-9./]+', '', soup_)
+
+    #lowercase the words and remove punctuation
+    lower_ = ''.join([word.lower() for word in soup_])
+
+    #remove puncutations using a custom list
+    punc_ = ''.join([punc(word) for word in lower_])
+    #tokenize
+    token_ = re.split('\W+',punc_)
+    #remove stopwords
+    stop_ = [word for word in token_ if word not in stopwords]
+    tweet = ' '.join(word for word in stop_)
+
+    return tweet
+    
+```
 
 
 * [Data Cleaning Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/notebooks/elon_clean.ipynb)
