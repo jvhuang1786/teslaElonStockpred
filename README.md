@@ -83,32 +83,38 @@ No Tweets - 928 tweet observations
 
      Alternative Hypothesis: the distributions of both samples are not equal.
      
-`Comparison` | `Mann-Whitney U Test Stat` | `p-value`
-            --- | --- | ---
-            Biz Tweet and No Tweet| 390147.500 | 0.000
-            Biz Tweet and Personal Tweet| 130155.500 | 0.000
-            Personal Tweet and No Tweet| 250090.500 | 0.011
-            <br />
+ The results are below: 
 
+<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/Screen%20Shot%202020-09-16%20at%2011.07.16%20PM.png" width="480"></img>
+
+Here is a boxplot of the different categories. 
+
+<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/distribithypoth.gif" width="480"></img>
 
 * [Hypothesis Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/notebooks/elonHypothesis.ipynb)
 
-
-
 ## Data Wrangling
 
-Steps For DataWrangling:
+For the Tweets:
 
-     Splitting the data in half
-     Combining single image data to split data
-     Mirroring the image data    
-     Adjusting the brightness of the image data     
-     Photoshop increase image resolution
-     Resize the image to 512 x 512 and 256 x 256
-     Run through fastai
-     Use dataset_tool.py from Nvidia to transform to tfrecords
+	* There was about 10000 + tweets
+	* They were collected using the GetOldTweet3 library from twitter.
+	* Twitter handle was elonmusk
+	* Tweet, fav_count and retweet_count was collected
+	* To classify between business or personal a regex was used.  
+	* I then read through all 10000 tweets to reclassify them.
+	* Vader was used to create a label for positive or negative.
+	
+For Financial Data:
+	
+	* Yahoo data was collected using pandas_dataereader
+	* Since Elon didn't tweet that much until December 1st, 2011 all financial data before that was not used.
 
-
+Merging:
+	
+	* I then combined all the text data by day.  
+	* Then matched the day of the tweet with its financial price.
+	
 * [Data Wrangling Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/notebooks/elon_wrangle.ipynb)
 
 
