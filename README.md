@@ -170,7 +170,7 @@ WordCloud, Bokeh count and word count plots were created.
 
 A Word2Vec was used to show the relation among Elon's vocabulary.  
 
-<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/distribution_classification.png" width="480"></img>
+<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/Unknown-13" width="480"></img>
 
 
 Also, the distribution of the tweets following in sentiment and type:
