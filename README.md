@@ -172,7 +172,7 @@ WordCloud, Bokeh count and word count plots were created.
 
 A Word2Vec was used to show the relation among Elon's vocabulary.  
 
-<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/Unknown-13" width="480"></img>
+<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/Unknown-13" width="800"></img>
 
 
 Also, the distribution of the tweets following in sentiment and type:
@@ -256,7 +256,7 @@ Volume 0.0011621305
 
 I tried 3 neural networks.  GRU produced overall the best results. 
 
-<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/face_morph.gif" width="480"></img>
+<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/Sep-17-2020%2000-18-57.gif" width="480"></img>
 
 Final GRU architecture is below: 
 
@@ -302,9 +302,15 @@ Predictions using DistilBERT to classify first and then add it in the dataframe 
 
 Before PyBay2020 predictions were made from August 1st, 2020 to August 13th, 2020.  Using the saved scaler on the training data as well as the saved GRU model.
 
-<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/armor_morph.gif" width="480"></img>
+Using DistilBERT model to make new predictions:
 
-<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/armor_morph.gif" width="480"></img>
+<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/Sep-17-2020%2000-18-50.gif" width="480"></img>
+
+Then inserting the predictions with the collected dataframe of retweet_count, fav_count, close price etc... using a walkforward prediction using GRU timeseries.
+
+<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/Sep-17-2020%2000-18-41.gif"></img>
+
+August 12th, 2020 is the annoucnement of the stock split. Elon didn't tweet about it but this leads me to believe there are better ways to collect sentiment or text data from elsewhere. 
 
 * [RNN, LSTM, GRU Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/lstm_gru/elon_lstm_gruv1.ipynb)
 
