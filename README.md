@@ -10,9 +10,9 @@ Financial price data was collected using the Yahoo Finance API
 
 Tweet data was collected using the GetOldTweets3 API 
 
-A webapp was also made for this project and can be found here:
+#### A webapp was also made for this project and can be found here:
 
-[Tesla Elon Web APP](https://elon-tesla.herokuapp.com)
+#### [Tesla Elon Web APP](https://elon-tesla.herokuapp.com)
 
 **Goal of the model was to see if we can use BERT to improve multivariate time series predictions**
 
