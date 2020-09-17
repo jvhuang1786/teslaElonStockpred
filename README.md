@@ -184,9 +184,11 @@ Also, the distribution of the tweets following in sentiment and type:
 
 ## Classical Text Classification 
 
-Visualization of Feature Map/Activation Map of images using VGG16 convolutional neural network
+Sklearn library was used to see if we could classify the text into the 6 categories first.  However, the results were not great even with hypertuning. 
 
-     Further from input the less details we can see.
+The best model after hypertuning had a f1-score of 0.62.  Below are some of the results:
+
+
 
 * [Traditional ML Classifications](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/classical_classification/elonVectorizerClassification.ipynb)
 
