@@ -204,13 +204,19 @@ Below is the confusion matrix for DistilBERT
 
 <img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/confusion_matrix_distil.png" width="480"></img>
 
+DistilBERT model was chosen since it was significantly smaller at 260 mb vs 1.4 gb(BERT). 
+
 * [Elon BERT pytorch](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/elonBERTTorch/elonBERTtorch.ipynb)
 * [Elon DistilBERT pytorch](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/distilBERT/elonDistilBERT.ipynb)
 
 
 ## XgBoost and Random Forest Regression 
 
-Did a MinMaxScaler and took 1 difference for the sklearrn models and the tensorflow models. 
+I tried using classical ml models to do a time series prediction.  However, because of the structure of these algorithms they wouldn't be able be a good predictor if the stock kept changing at a rapid price. 
+
+First we tested if it was stationary by using the Dickey Fuller test.  It wasn't so I took the first difference and tested it again and it was. 
+
+To inverse the scaler and difference the folowing code was used. 
 
 ```python
 # inverse scaling for a forecasted value
@@ -224,6 +230,22 @@ def invert_scale(scaler, X, value):
 # invert differenced value
 def inverse_difference(history, yhat, interval=1):
 	return yhat + history[-interval]
+```
+
+Feature importance after hyperparameter tuning on xgBoost:
+
+```python
+retweet_count 0.0014913935
+fav_count 0.0011018803
+tweetLen 0.002772917
+Business positive 0.0014061782
+Business neutral 0.0023037135
+Business negative 0.0
+Personal positive 0.0037213876
+Personal neutral 0.0014253978
+Personal negative 0.004577721
+Open 0.9800373
+Volume 0.0011621305
 ```
 
 * [XgBoost and Random Forest Regression](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/trees/elonRFxgBoost.ipynb)
