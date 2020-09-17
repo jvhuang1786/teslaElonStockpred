@@ -94,7 +94,7 @@ Steps For DataWrangling:
      Use dataset_tool.py from Nvidia to transform to tfrecords
 
 
-* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
+* [Data Wrangling Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/notebooks/elon_wrangle.ipynb)
 
 
 
@@ -112,7 +112,7 @@ Main steps of in data Augmentation:
      Use dataset_tool.py from Nvidia to transform to tfrecords
 
 
-* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
+* [Data Cleaning Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/notebooks/elon_clean.ipynb)
 
 
 ## Data Visualization
@@ -129,7 +129,7 @@ Main steps of in data Augmentation:
      Use dataset_tool.py from Nvidia to transform to tfrecords
 
 
-* [Image Data Cleaning and Augmentation](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_dataprep.ipynb)
+* [Data Visualization Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/notebooks/elon_visualization.ipynb)
 
 
 ## Classical Text Classification 
@@ -138,7 +138,7 @@ Visualization of Feature Map/Activation Map of images using VGG16 convolutional 
 
      Further from input the less details we can see.
 
-* [Feature Map](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/feature_map.ipynb)
+* [Traditional ML Classifications](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/classical_classification/elonVectorizerClassification.ipynb)
 
 ## BERT and DistilBERT
 
@@ -155,7 +155,9 @@ Quick Visualization of image data using a DCGAN requires minimal computing power
           Padding
           kernel_initializer
 
-* [Deep Convolutional GAN](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/dcgan_mhxx.ipynb)
+* [Elon BERT pytorch](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/elonBERTTorch/elonBERTtorch.ipynb)
+* [Elon DistilBERT pytorch](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/distilBERT/elonDistilBERT.ipynb)
+
 
 ## XgBoost and Random Forest Regression 
 
@@ -164,13 +166,11 @@ Best way to measure a GAN still is to look at fake images generated however ther
        FID measures the normal distribution distance between the real and fake images.  
        The closer the distance, the lower the score the better the image quality and diversity
 
-* [Frechet Inception Distance](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/frechet_inception_distance.ipynb)
+* [XgBoost and Random Forest Regression](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/trees/elonRFxgBoost.ipynb)
 
 ## RNN, LSTM, GRU 
 
-You will need to download NVIDIA StyleGAN.  
 
-* [Nvidia StyleGAN](https://github.com/NVlabs/stylegan)
 
 Anime-face dataset was trained for 7 days using the default learning rate and mini batch repeat.  
 Need to set the data path for the tfrecords to the location of your tfrecords.  
@@ -182,7 +182,7 @@ All adjustments were made inside the training/training_loop.py file.  You need t
 
 <img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/armor_morph.gif" width="480"></img>
 
-* [MHXX- StyleGAN](https://nbviewer.jupyter.org/github/jvhuang1786/mhxxCapStone/blob/master/mhxx_stylegan.ipynb)
+* [RNN, LSTM, GRU Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/lstm_gru/elon_lstm_gruv1.ipynb)
 
 ## Author
 
