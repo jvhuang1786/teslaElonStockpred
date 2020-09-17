@@ -188,24 +188,21 @@ Sklearn library was used to see if we could classify the text into the 6 categor
 
 The best model after hypertuning had a f1-score of 0.62.  Below are some of the results:
 
-
+<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/Screen%20Shot%202020-09-17%20at%2012.00.09%20AM.png" width="480"></img>
 
 * [Traditional ML Classifications](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/classical_classification/elonVectorizerClassification.ipynb)
 
 ## BERT and DistilBERT
 
-<img src="https://github.com/jvhuang1786/mhxxCapStone/blob/master/images/mhxx.gif" width="480"></img>
+Using a BERT and DistilBERT yielded much better results.  The BERT model f1-score was 0.80 around and DistilBERT was about 0.79
 
-Quick Visualization of image data using a DCGAN requires minimal computing power.
+80 tokens were chosen given the distribution. 
 
-       Generator uses Conv2DTranspose
-       Discriminator uses Conv2D
-       Hyperparameters:
-          Filter
-          kernel_size
-          Stride
-          Padding
-          kernel_initializer
+<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/f2859e575638aacebdaa56cce1ae2862f13b743c462e97320fe05116.jpeg-2.png" width="480"></img>
+
+Below is the confusion matrix for DistilBERT
+
+<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/confusion_matrix_distil.png" width="480"></img>
 
 * [Elon BERT pytorch](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/elonBERTTorch/elonBERTtorch.ipynb)
 * [Elon DistilBERT pytorch](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/distilBERT/elonDistilBERT.ipynb)
