@@ -123,6 +123,8 @@ Merging:
 
 Data Cleaning Code:
 
+For text cleaning for the sklearn classification models the following code was used to do text cleaning. 
+
 ```python
 
 def clean_tweet(tweet):
@@ -147,22 +149,34 @@ def clean_tweet(tweet):
     
 ```
 
+To fill in missing values for stock days an interpolate method was used.  When Looking at the data it kept missing values for finacial data the same.  For text data an empty string was used, and 0 for retweets, tweets and business or personal sentiment count. 
+
+
+```python
+#Features
+X_train[stockDatax] = X_train[stockDatax].interpolate(method = 'linear', 
+                                                    limit_direction="both")
+X_test[stockDatax] = X_test[stockDatax].interpolate(method = 'linear', 
+                                                    limit_direction="both")
+```						   
+
 
 * [Data Cleaning Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/notebooks/elon_clean.ipynb)
 
 
 ## Data Visualization
 
-Main steps of in data Augmentation:
+WordCloud, Bokeh count and word count plots were created.
 
-     Splitting the data in half
-     Combining single image data to split data
-     Mirroring the image data    
-     Adjusting the brightness of the image data     
-     Photoshop increase image resolution
-     Resize the image to 512 x 512 and 256 x 256
-     Run through fastai
-     Use dataset_tool.py from Nvidia to transform to tfrecords
+A Word2Vec was used to show the relation among Elon's vocabulary.  
+
+<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/distribution_classification.png" width="480"></img>
+
+
+Also, the distribution of the tweets following in sentiment and type:
+
+<img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/distribution_classification.png" width="480"></img>
+
 
 
 * [Data Visualization Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/notebooks/elon_visualization.ipynb)
