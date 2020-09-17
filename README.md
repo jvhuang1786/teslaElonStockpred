@@ -191,10 +191,21 @@ Quick Visualization of image data using a DCGAN requires minimal computing power
 
 ## XgBoost and Random Forest Regression 
 
-Best way to measure a GAN still is to look at fake images generated however there are quantitative measures.  Such as Frechet Inception Distance, Inception Score and Perceptual Path Length.
+Did a MinMaxScaler and took 1 difference for the sklearrn models and the tensorflow models. 
 
-       FID measures the normal distribution distance between the real and fake images.  
-       The closer the distance, the lower the score the better the image quality and diversity
+```python
+# inverse scaling for a forecasted value
+def invert_scale(scaler, X, value):
+	new_row = [x for x in X] + [value]
+	array = np.array(new_row)
+	array = array.reshape(1, len(array))
+	inverted = scaler.inverse_transform(array)
+	return inverted[0, -1]
+
+# invert differenced value
+def inverse_difference(history, yhat, interval=1):
+	return yhat + history[-interval]
+```
 
 * [XgBoost and Random Forest Regression](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/trees/elonRFxgBoost.ipynb)
 
