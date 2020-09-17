@@ -71,7 +71,7 @@
 
 ## Hypothesis 
 
-Hypothesis using Kruskal- Wallis H-Test and Mann-Whitnney U Test:
+Hypothesis using Kruskal- Wallis H-Test and Mann-Whitney U Test:
 
 To test if the distributions are different, I chose to do two tests. A Mann-Whitney U and a Kruskal-Wallis H test.
 
@@ -109,7 +109,7 @@ For the Tweets:
 	
 For Financial Data:
 	
-	* Yahoo data was collected using pandas_dataereader
+	* Yahoo data was collected using pandas_datareader
 	* Since Elon didn't tweet that much until December 1st, 2011 all financial data before that was not used.
 
 Merging:
@@ -151,7 +151,7 @@ def clean_tweet(tweet):
     
 ```
 
-To fill in missing values for stock days an interpolate method was used.  When Looking at the data it kept missing values for finacial data the same.  For text data an empty string was used, and 0 for retweets, tweets and business or personal sentiment count. 
+To fill in missing values for stock days an interpolate method was used.  When Looking at the data it kept missing values for financial data the same.  For text data an empty string was used, and 0 for retweets, tweets and business or personal sentiment count. 
 
 
 ```python
@@ -186,9 +186,9 @@ Also, the distribution of the tweets following in sentiment and type:
 
 ## Classical Text Classification 
 
-Sklearn library was used to see if we could classify the text into the 6 categories first.  However, the results were not great even with hypertuning. 
+Sklearn library was used to see if we could classify the text into the 6 categories first.  However, the results were not great even with hyper tuning. 
 
-The best model after hypertuning had a f1-score of 0.62.  Below are some of the results:
+The best model after hyper tuning had a f1-score of 0.62.  Below are some of the results:
 
 <img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/Screen%20Shot%202020-09-17%20at%2012.00.09%20AM.png" width="480"></img>
 
@@ -218,7 +218,7 @@ I tried using classical ml models to do a time series prediction.  However, beca
 
 First we tested if it was stationary by using the Dickey Fuller test.  It wasn't so I took the first difference and tested it again and it was. 
 
-To inverse the scaler and difference the folowing code was used. 
+To inverse the scaler and difference the following code was used. 
 
 ```python
 # inverse scaling for a forecasted value
@@ -298,7 +298,7 @@ history = gru_model.predict(train_reshaped)
 
 ```
 
-Predictions using DistilBERT to classify first and then add it in the dataframe for the GRU timeseries prediction.
+Predictions using DistilBERT to classify first and then add it in the data frame for the GRU timeseries prediction.
 
 Before PyBay2020 predictions were made from August 1st, 2020 to August 13th, 2020.  Using the saved scaler on the training data as well as the saved GRU model.
 
@@ -306,11 +306,11 @@ Using DistilBERT model to make new predictions:
 
 <img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/Sep-17-2020%2000-18-50.gif" width="480"></img>
 
-Then inserting the predictions with the collected dataframe of retweet_count, fav_count, close price etc... using a walkforward prediction using GRU timeseries.
+Then inserting the predictions with the collected data frame of retweet_count, fav_count, close price etc... using a walk forward prediction using GRU timeseries.
 
 <img src="https://github.com/jvhuang1786/teslaElonStockpred/blob/master/images/Sep-17-2020%2000-18-41.gif"></img>
 
-August 12th, 2020 is the annoucnement of the stock split. Elon didn't tweet about it but this leads me to believe there are better ways to collect sentiment or text data from elsewhere. 
+August 12th, 2020 is the announcement of the stock split. Elon didn't tweet about it but this leads me to believe there are better ways to collect sentiment or text data from elsewhere. 
 
 * [RNN, LSTM, GRU Notebook](https://github.com/jvhuang1786/teslaElonStockpred/blob/master/lstm_gru/elon_lstm_gruv1.ipynb)
 
