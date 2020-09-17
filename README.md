@@ -27,27 +27,27 @@ A webapp was also made for this project and can be found here:
 
 <tr>
   <td>Data Wrangling</td>
-  <td>numpy, os, cv2, glob, pandas, PIL, scipy, imageio, keras, augmentor, fastai</td>
+  <td>GetOldTweet3, yahoofinance, re, vadersentiment, nltk, pandas_datareader, seaborn</td>
 </tr>
 
 <tr>
   <td>Data Cleaning</td>
-  <td>keras.applications.vgg16, keras.preprocessing.image, matplotlib, numpy</td>
+  <td>pandas, sklearn, numpy, matplotlib</td>
 </tr>
 
 <tr>
   <td>Data Visualization</td>
-  <td>numpy, os, glob, imageio, time, PIL, keras, matplotlib</td>
+  <td>itertools, collections, PIL, wordcloud, seaborn, nltk, bs4, bokeh, gensim, plotly</td>
 </tr>
 
 <tr>
   <td>Classicial Classification of Text</td>
-  <td>numpy, scipy, keras, skimage.transform</td>
+  <td>seaborn, sklearn, matplotlib, xgboost</td>
 </tr>
 
 <tr>
   <td>BERT and DistilBert</td>
-  <td>numpy, tensorflow, dnnlib, config, train, training, copy, metrics</td>
+  <td>huggingface, ktrain, pytorch, tensorflow</td>
 </tr>
 
 <tr>
